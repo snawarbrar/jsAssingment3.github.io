@@ -1,0 +1,57 @@
+{
+  "Topic": "Wierd deals of the Day",
+  "wierdProducts":[
+
+    {
+      "productName":"A bacon-scented mustache",
+      "price":"$4.07",
+      "discription":"it is a scent hidden in an inconspicuous piece of facial hair",
+      "features":[
+        "Long lasting scent",
+        "unique design and idea"
+        ],
+      "image":"mustache.jpg"
+    },
+    {
+      "productName":"A dog Dryer",
+      "price":"$39.95",
+      "discription":"a bizarre blow-dryer suit out there that can help keep your pup from dripping all over the house.",
+      "features":[
+        "keeps your floor dry",
+        "covinient"
+      ],
+      "image":"dog-dryer.jpg"
+
+    },
+    {
+      "productName":"dog Pillow",
+      "price":"$14.99",
+      "discription":"Just because your building doesn't allow pets doesn't mean you can't enjoy the company of a furry friend",
+      "features":[
+        "realastic fur for realastic feelings",
+        "A sign of a do lover"
+      ],
+      "image":"realistic-dog-pillow.jpg"
+    },
+    {
+      "productName":"A dog wig",
+      "price":"$9.57",
+      "discription":"Dogs deserve to feel every bit as stylish as their human counterparts. And fortunately, this wig can help them achieve that goal.",
+      "features":[
+        "stylish",
+        "available in various colors"
+      ],
+      "image":"small-dog-wig.jpg"
+    },
+    {
+      "productName":"gardening claws",
+      "price":"$9.49",
+      "discription":"Now you can garden like the wild beast you are. Just be sure not to fall into any wild animal traps you may have set back when you were a poor, claw-less human.",
+      "features":[
+        "perfect for gardening by hand",
+        "very sharp claws"
+      ],
+      "image":"claws.jpg"
+    }
+  ]
+}

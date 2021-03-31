@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lab</title>
+  </head>
+  <body>
+    <header>
+
+    </header>
+    <section>
+    </section>
+    <footer>
+    </footer>
+    <script>
+
+  		let header = document.querySelector('header');
+  		let section = document.querySelector('section');
+
+
+          let requestUrl = "https://snawarbrar.github.io/first.github.io/first.json";
+
+
+
+          let request = new XMLHttpRequest();
+
+
+          request.open("GET",requestUrl);
+
+          request.responseType = "json";
+
+
+          request.send();
+
+
+          request.onload = function(){
+             let  weirdProducts = request.response;
+              console.log(weirdProducts);
+              populateHeader(weirdProducts);
+              wierdProducts(weirdProducts);
+          };
+
+  		//create populateHeader and topFlavours functions
+          function populateHeader(jsonObj)
+          {
+              let header1 = document.createElement("h1");
+              header.textContent = jsonObj["Topic"];
+              header.appendChild(header1);
+              //let headerPara=document.createElement("p");
+              //headerPara.textContent=jsonObj["headOffice"];
+              //header.appendChild(headerPara);
+          }
+
+          function wierdProducts(jsonObj)
+          {
+              let wierdProducts = jsonObj["wierdProducts"];
+
+
+          for(let i= 0; i<wierdProducts.length;i++)
+          {
+              let article = document.createElement("article");
+              let h2 = document.createElement("h2");
+              let img = document.createElement("img");
+              let p1 = document.createElement("p");
+              let p2 = document.createElement("p");
+              let list = document.createElement("ul");
+
+              img.setAttribute("src", "images/" + wierdProducts[i].image);
+              img.setAttribute("alt", wierdProducts[i].productName);
+              h2.textContent = wierdProducts[i].productName;
+              p1.textContent = wierdProducts[i].price;
+              p2.textContent = wierdProducts[i].discription;
+
+              let features = wierdProducts[i].features;
+
+
+              for(let j = 0; j< features.length; j++)
+              {
+                  let productFeatures = document.createElement("li");
+                  productFeatures.textContent = features[j];
+                  list.appendChild(productFeatures);
+              }
+
+              article.appendChild(img);
+              article.appendChild(h2);
+              article.appendChild(p1);
+              article.appendChild(p2);
+              article.appendChild(list);
+              section.appendChild(article);
+
+
+
+
+
+          }
+          }
+
+
+
+  		// This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+
+
+  		</script>
+    <main>
+    <h1>My fav Car</h1>
+    </main>
+  </body>
+</html>
